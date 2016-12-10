@@ -62,7 +62,7 @@ function main() {
 	}
 }());
 
-canvas.addEventListener("click",function() {
+canvas.addEventListener("click",function(e) {
 	gamestate.line++;
 	if (gamestate.mode === 0) {
 		if (gamestate.line < text[gamestate.submode].length) {
@@ -71,12 +71,17 @@ canvas.addEventListener("click",function() {
 			gamestate.line = 1;
 			gamestate.mode = text[gamestate.submode][0][1]
 			gamestate.submode = text[gamestate.submode][0][2];
-			changeImage(text[gamestate.submode][0][0]);
 			if (gamestate.mode === 0) {
+				changeImage(text[gamestate.submode][0][0]);
 				changeText(text[gamestate.submode][gamestate.line]);
 			} else {
-				changeText("");
+				changeImage(investigate[gamestate.submode][0]);
+				changeText("(Click interesting elements to investigate.)");
 			}
 		}
+	} else if (gamestate.mode === 1) {
+		let x = e.clientX-canvas.getBoundingClientRect().left;
+		let y = e.clientY-canvas.getBoundingClientRect().top;
+		console.log(x+", "+y);
 	}
 })
