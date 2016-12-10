@@ -15,6 +15,9 @@ let toLoad = [
 let images = [];
 
 let gamestate = {
+	mode: 0, // 0 - text, 1 - investigation
+	submode: "intro",
+	line: 1,
 	items: {
 		keyFound: false,
 		doorOpen: false,
@@ -30,7 +33,7 @@ function changeImage(id) {
 	}
 }
 
-function drawText(str) {
+function changeText(str) {
 	let arg = str.split("\n");
 
 	ctx.fillStyle = "black";
@@ -43,7 +46,7 @@ function drawText(str) {
 
 function main() {
 	changeImage(-1);
-	drawText("");
+	changeText(text[gamestate.submode][gamestate.line]);
 }
 
 (function() { //load
@@ -58,3 +61,22 @@ function main() {
 		images[i].src = toLoad[i];
 	}
 }());
+
+canvas.addEventListener("click",function() {
+	gamestate.line++;
+	if (gamestate.mode === 0) {
+		if (gamestate.line < text[gamestate.submode].length) {
+			changeText(text[gamestate.submode][gamestate.line]);
+		} else {
+			gamestate.line = 1;
+			gamestate.mode = text[gamestate.submode][0][1]
+			gamestate.submode = text[gamestate.submode][0][2];
+			changeImage(text[gamestate.submode][0][0]);
+			if (gamestate.mode === 0) {
+				changeText(text[gamestate.submode][gamestate.line]);
+			} else {
+				changeText("");
+			}
+		}
+	}
+})
