@@ -82,6 +82,17 @@ canvas.addEventListener("click",function(e) {
 	} else if (gamestate.mode === 1) {
 		let x = e.clientX-canvas.getBoundingClientRect().left;
 		let y = e.clientY-canvas.getBoundingClientRect().top;
-		console.log(x+", "+y);
+		for (var i = 1; i < investigate[gamestate.submode].length; i++) {
+			let el = investigate[gamestate.submode][i];
+			if (x > el[0] && x < el[2] && y > el[1] && y < el[3]) {
+				gamestate.line = 1;
+				gamestate.mode = 0;
+				gamestate.submode = investigate[gamestate.submode][i][4]();
+				changeImage(text[gamestate.submode][0][0]);
+				changeText(text[gamestate.submode][gamestate.line]);
+				break;
+			}
+		}
+		console.log(x+" "+y);
 	}
 })
