@@ -43,7 +43,7 @@ function drawText(str) {
 
 function main() {
 	changeImage(-1);
-	drawText("0123456789012345678901234567890123456789");
+	drawText("");
 }
 
 (function() { //load

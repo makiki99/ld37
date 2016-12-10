@@ -42,7 +42,7 @@ let text = {
 		[0,"_investigationRoom"],
 		"Maybe this key works with one of these lockers?",
 		"Nah. It is too big so it doesn't fit these keyholes."
-	]
+	],
 	//chest
 	chestLocked: [
 		[0,"_investigationRoom"],
@@ -61,7 +61,7 @@ let text = {
 		"A note?",
 		"It only says that the door hs been opened.",
 		"I guess there is nothing else to this chest."
-	]
+	],
 	//door
 	doorLocked: [
 		[0,"_investigationRoom"],
@@ -78,7 +78,7 @@ let text = {
 		"Maybe this is the key to open this door?",
 		"Wait... There is no keyhole.",
 		"Is there any other way to open this door?"
-	]
+	],
 	doorOpen: [
 		[0,"ending"],
 		"The door unlocked...?",
@@ -93,7 +93,7 @@ let text = {
 		"...to first give hope to escape...",
 		"and then do this?",
 		"Huh?",
-		"There is a note here..."
+		"There is a note here...",
 		"\"Sorry, mr. Player Character, but I had to make this room your whole world.\"",
 		"\"It's just because of the theme of Ludum Dare 37 - One Room\"",
 		"\"But don't worry. Soon the user will close this webpage...\"",
