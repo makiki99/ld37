@@ -76,7 +76,7 @@ canvas.addEventListener("click",function(e) {
 				changeText(text[gamestate.submode][gamestate.line]);
 			} else {
 				changeImage(investigate[gamestate.submode][0]);
-				changeText("(Click interesting elements to investigate.)");
+				changeText("(Click to inspect.)");
 			}
 		}
 	} else if (gamestate.mode === 1) {
