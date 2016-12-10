@@ -18,7 +18,7 @@ let gamestate = {
 	mode: 0, // 0 - text, 1 - investigation
 	submode: "intro",
 	line: 1,
-	items: {
+	flags: {
 		keyFound: false,
 		doorOpen: false,
 	}
