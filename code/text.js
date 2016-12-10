@@ -1,6 +1,6 @@
 let text = {
 	intro: [
-		[1,"intro2"],
+		[-1,"intro2"],
 		"...",
 		"...Ugh...",
 		"...Where am I?",
@@ -24,7 +24,7 @@ let text = {
 		"Let's check it out."
 	],
 	lockerNote: [
-		[0,"_investigationLocker"],
+		[1,"_investigationLocker"],
 		"There is a note here.",
 		"Uh...",
 		"Is that a code?",
@@ -32,7 +32,7 @@ let text = {
 		"It won't help me anyways - I'm not a programmer."
 	],
 	lockerKey: [
-		[0,"_investigationRoom"],
+		[1,"_investigationRoom"],
 		"A key...?",
 		"I guess I'll take it.",
 		"There isn't anything else which is useful...",
@@ -45,7 +45,7 @@ let text = {
 	]
 	//chest
 	chestLocked: [
-		[0,"_investigation0"],
+		[0,"_investigationRoom"],
 		"There is a chest here.",
 		"It is locked though.",
 		"Still, there's probably a reason why it is here."
@@ -57,7 +57,7 @@ let text = {
 		"Let's look into it."
 	],
 	chestOpen2: [
-		[0,"_investigationRoom"],
+		[2,"_investigationRoom"],
 		"A note?",
 		"It only says that the door hs been opened.",
 		"I guess there is nothing else to this chest."
@@ -86,7 +86,7 @@ let text = {
 	],
 	//ending
 	ending:[
-		[0,"ending2"],
+		[3,"ending2"],
 		"What.",
 		"Just... what.",
 		"Why would someone be so cruel...",
