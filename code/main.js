@@ -43,7 +43,7 @@ function changeText(str) {
 	ctx.fillRect(0,480,480,160);
 	ctx.fillStyle = "white";
 	for (var i = 0; i < arg.length; i++) {
-		ctx.fillText(arg[i],16,496+16*i)
+		ctx.fillText(arg[i],16,500+20*i)
 	}
 }
 

@@ -3,7 +3,9 @@ let investigate = {
 		0,
 		[220,230,330,300,function() {
 			//chest
-			if (gamestate.flags.keyFound) {
+			if (gamestate.flags.doorOpen) {
+				return "chestAlreadyChecked";
+			} else if (gamestate.flags.keyFound) {
 				gamestate.flags.doorOpen = true;
 				return "chestOpen";
 			} else {

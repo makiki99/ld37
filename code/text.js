@@ -52,15 +52,20 @@ let text = {
 	],
 	chestOpen: [
 		[0,0,"chestOpen2"],
-		"I guess that key is meant to open that chest...",
+		"Maybe I can open this chest with this key...",
 		"Huh, it really did open it.",
-		"Let's look into it."
+		"Let's see what is inside."
 	],
 	chestOpen2: [
 		[2,1,"investigationRoom"],
-		"A note?",
-		"It only says that the door has been opened.",
+		"There's only a note?",
+		"It says that the door has been opened.",
 		"I guess there is nothing else to this chest."
+	],
+	chestAlreadyChecked:[
+		[0,1,"investigationRoom"],
+		"There is no point in checking this chest again.",
+		"It can't suddenly have something more inside."
 	],
 	//door
 	doorLocked: [
@@ -80,18 +85,17 @@ let text = {
 	],
 	doorOpen: [
 		[0,0,"ending"],
-		"Since the door is unlocked, let's get outta here."
+		"If the door is really unlocked, I guess\nthere is no point staying inside this room."
 	],
 	//ending
 	ending:[
 		[3,0,"ending2"],
 		"What.",
 		"Just... what.",
-		"Why would someone be so cruel...",
-		"...to first give hope to escape...",
-		"and then do this?",
-		"Huh?",
-		"There is a note here...",
+		"That is so cruel.",
+		"Am I supposed to stay here forever?",
+		"There is a note here though...",
+		"Let's read it.",
 		"\"Sorry, mr. Player Character,\nbut I had to make this room your whole world.\"",
 		"\"It's just because of the theme of\nLudum Dare 37 - One Room\"",
 		"\"But don't worry.\nSoon the user will close this webpage...\"",
@@ -141,11 +145,11 @@ let text = {
 		[3,1,"investigationRoom2"],
 		"The same wall, the same note.",
 		"I don't think there is anything more\nto this...",
-		"Althrough, I'm not in a mood to sta\nhere.",
+		"Althrough, I'm not in a mood to stay\nhere.",
 		"I wouldn't be unhappy if I came back\nto my world."
 	],
 	lockerAlt:[
-		[4,1,"investigationLocker2"],
+		[0,1,"investigationLocker2"],
 		"Huh?",
 		"Another locker has opened?",
 		"Let's check it out then."
