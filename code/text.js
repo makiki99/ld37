@@ -71,7 +71,7 @@ let text = {
 	doorLocked: [
 		[0,1,"investigationRoom"],
 		"A door.",
-		"I don't know where it leads, but there is no harm\nin checking it out, right?",
+		"I don't know where it leads, but there's\nno harm in checking it out, right?",
 		"...it's locked?",
 		"And it looks like it is the only way outside.",
 		"...",
