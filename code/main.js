@@ -10,7 +10,8 @@ let toLoad = [
 	"img/locker.png",
 	"img/chest.png",
 	"img/door.png",
-	"img/locker2.png"
+	"img/locker2.png",
+	"img/door2.png"
 ];
 
 let images = [];
@@ -22,6 +23,7 @@ let gamestate = {
 	flags: {
 		keyFound: false,
 		doorOpen: false,
+		pickaxeFound: false,
 	}
 };
 
@@ -46,6 +48,11 @@ function changeText(str) {
 }
 
 function main() {
+	if (localStorage.LD37 === "true") {
+		gamestate.submode = "altIntro";
+	} else if (localStorage.LD37 === "tooTrue") {
+		gamestate.submode = "noMore"
+	}
 	changeImage(-1);
 	changeText(text[gamestate.submode][gamestate.line]);
 }

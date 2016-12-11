@@ -50,7 +50,12 @@ let investigate = {
 		}],
 		[320,90,420,270,function() {
 			//door
-			return "doorAlt";
+			if (gamestate.flags.pickaxeFound) {
+				localStorage.LD37 = "tooTrue";
+				return "doorBreak";
+			} else {
+				return "doorAlt";
+			}
 		}],
 		[20,50,270,310,function() {
 			//lockers
@@ -58,10 +63,11 @@ let investigate = {
 		}]
 	],
 	investigationLocker2: [
-		1,
-		[220,230,330,300,function() {
-			//chest
-			return "chestAlt";
+		4,
+		[270,150,360,240,function() {
+			//pickaxe
+			gamestate.flags.pickaxeFound = true;
+			return "pickaxe";
 		}],
 	],
 }

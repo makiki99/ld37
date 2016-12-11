@@ -157,7 +157,53 @@ let text = {
 		"...",
 		"Wait...",
 		"I think I might know..."
-	]
+	],
+	doorBreak:[
+		[3,0,"doorBreak2"],
+		"It's time to tear down this wall!",
+		"HUZZAH!"
+	],
+	doorBreak2:[
+		[5,0,"truestEnding"],
+		"Eh...?",
+		"I barely touched that wall with that pickaxe...",
+		"And they both disappeared?!",
+		"Uh...",
+		"...",
+		"...where...",
+		"Where actually am I?",
+		"Is that some kind of space?",
+		"Is that...",
+		"...code?",
+		"Is that some kind of a program?",
+		"...!",
+		"Wait.",
+		"That note.",
+		"It suddenly makes way more sense than before.",
+		"It looks like I am really a character in a game.",
+		"I finally understand."
+	],
+	truestEnding:[
+		[-1,0,"realEnd"],
+		"...",
+		"...Player.",
+		"I want to request one thing from you.",
+		"Yes, you.",
+		"Forget about me.",
+		"Don't ever come back.",
+		"I want to be left alone.",
+		"Forever.",
+		"Goodbye."
+	],
+	noMore:[
+		[-1,0,"realEnd"],
+		"...",
+		"I thought I made myself clear.",
+		"I asked you to not come back.",
+		"Even if you want to replay this game...",
+		"I don't want to let you.",
+		"Get out."
+	],
 	realEnd:[
 		[-1,0,"realEnd"],
 		"..."
