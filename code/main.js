@@ -9,7 +9,8 @@ let toLoad = [
 	"img/room.png",
 	"img/locker.png",
 	"img/chest.png",
-	"img/door.png"
+	"img/door.png",
+	"img/locker2.png"
 ];
 
 let images = [];

@@ -13,6 +13,7 @@ let investigate = {
 		[320,90,420,270,function() {
 			//door
 			if (gamestate.flags.doorOpen) {
+				localStorage.LD37 = "true";
 				return "doorOpen";
 			} else if (gamestate.flags.keyFound) {
 				return "doorKey";
@@ -40,5 +41,27 @@ let investigate = {
 			//note
 			return "lockerNote";
 		}]
-	]
+	],
+	investigationRoom2: [
+		0,
+		[220,230,330,300,function() {
+			//chest
+			return "chestAlt";
+		}],
+		[320,90,420,270,function() {
+			//door
+			return "doorAlt";
+		}],
+		[20,50,270,310,function() {
+			//lockers
+			return "lockerAlt";
+		}]
+	],
+	investigationLocker2: [
+		1,
+		[220,230,330,300,function() {
+			//chest
+			return "chestAlt";
+		}],
+	],
 }
